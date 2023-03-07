@@ -1,0 +1,103 @@
+#form{
+	
+				background-color:#333;
+				float:left;
+				padding:18px;
+				//position:absolute;
+				margin-left:26%;
+				//margin-top:20%;
+				//border:2px dashed yellow;
+				overflow:auto;
+				width:
+				
+	}		
+	
+	label{
+			
+			width:120px;
+			display:inline-block;
+			margin-bottom:15px;	
+			color:white;
+			font-weight:bold;
+			-webkit-transition-property:color;
+			-webkit-transition-duration:1s;
+	}
+	label:hover{ color:magenta;}
+	
+	input[type='text'],input[type='password'],textarea,select{
+				height:38px;
+				background-color:honeydew;
+				border:2px solid black;
+				border-radius:5px;
+				font-weight:bold;
+				padding-left:10px;
+				width:200px;
+				text-transform:capitalize;
+				outline:none;
+				
+			}
+			
+			input[type='email']{
+			
+				height:38px;
+				background-color:honeydew;
+				border:2px solid black;
+				border-radius:5px;
+				font-weight:bold;
+				padding-left:10px;
+				width:200px;
+			
+			}
+	
+	select:focus{
+	
+	background-color:white;
+	}	
+			
+	input:focus{
+			
+				background-color:white;
+	
+	}	
+
+	textarea:focus{
+		background-color:white;
+	
+	}
+
+		textarea.addr,textarea.descri {
+		height:110px;
+		}
+		
+		select{
+		height:40px;
+		}
+		
+		#submit{
+		
+					width:200px;
+					height:40px;
+					background-color:orange;
+					border-radius:10px;
+					border:none;
+					font-weight:bold;
+		}
+		#submit:hover{
+			background-color:purple;
+			color:white;
+		}
+		
+		body{
+		
+			//background-image:url( 'pattern.png');
+		}
+		
+		#content{
+		
+		//text-align:center;
+		}
+		
+		fieldset{
+		background-color:ivory;
+		border:1px solid white;	
+		}

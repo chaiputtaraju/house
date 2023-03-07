@@ -1,0 +1,35 @@
+$current_image=$_FILES['imgname']['name'];
+				
+		$extension = substr(strrchr($current_image, '.'), 1);
+		if (($extension == "jpg") || ($extension == "jpeg")  || ($extension == "png")) 
+		{
+
+		}
+		else
+		{
+		die('Unknown extension');
+		}
+		$new_image = $current_image;
+		$destination="photos/".$new_image;
+		$action = copy($_FILES['imgname']['tmp_name'], $destination);
+		if (!$action) 
+		{
+		die('File copy failed');
+		}
+		
+		
+		
+		$caption=$_REQUEST['caption'];
+		$refno=$_REQUEST['hrefno'];
+		$descri=$_REQUEST['descri'];
+		
+		$sql="select count(*)+1 as sino from snaps where refno=$refno";
+		$res=execute($sql);
+		$row=$res->fetch_object();
+		$sino=$row->sino;
+		
+			
+		
+		$sql="insert into snaps values( $sino,$refno,'$uname','$caption','$current_image','$descri')";
+		$res=execute( $sql );
+		

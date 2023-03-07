@@ -1,0 +1,34 @@
+create table owners(
+sino int unique,
+fname varchar(20) not null,
+lname varchar(20) not null,
+contno varchar(20) not null,
+email varchar(20) not null,
+addr varchar(20) not null,
+cdate date not null,
+uname varchar(20) primary key,
+pwd varchar(20) not null
+ );
+ 
+ create table ads(
+ sino int primary key auto_increment,
+ purpose varchar(20) not null,
+ area varchar(100) not null,
+ addr varchar(500) not null,
+htype varchar(50), 
+ amount varchar(20) not null,
+ descri text not null,
+ uname varchar(20) references owners(uname) );
+ 
+ create table snaps(
+ sino int not null,
+ refno int references ads(sino),
+ uname varchar(20) references owners(uname),
+ caption varchar(500) not null,
+ imgname varchar(500) not null,
+ descri text );
+ 
+ 
+ 
+ insert into owners values(
+ 1,'Rajesh','K','9877664532','raj@gmail.com','Davangere',curdate(),'raj123','123456');

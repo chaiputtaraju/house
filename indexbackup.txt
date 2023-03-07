@@ -1,0 +1,42 @@
+<html>
+	
+	<head>
+	<link rel="stylesheet" type="text/css" href="indexpage.css" />		
+	</head>
+	
+	<body>
+		
+		<?php
+		include_once('page1.php');
+		?>
+		
+		<div id=content>
+								
+			<?php
+			
+				if( isset($_REQUEST['page'] ) )
+				{
+					$p=$_REQUEST['page'];
+					include_once($p);
+				}
+				
+				else if( isset( $_REQUEST['report'] ) )
+				{
+					$msg=$_REQUEST['report'];
+					echo "<center><font color=yellow size=5>$msg</font></center>";
+				}
+				else
+				{
+				
+					include_once('default.php');
+				}
+				
+			?>
+		</div>
+		
+		<?php
+		include_once('page2.php');
+		?>
+	</body>	
+	</html>
+		

@@ -1,0 +1,30 @@
+#login{
+	
+			float:left;
+			//width:300px;
+			background-color:slateblue;
+			padding:25px;
+			//border:4px solid white;
+			margin-left:25%;
+			border-radius:6px;
+			
+		}
+	
+	input[type='text'],input[type='password']{
+	
+		height:30px;
+		width:150px;
+		border-radius:5px;
+		margin:10px;
+		//background-color:black;
+		color:black;
+		font-weight:bold;
+		
+		font-size:16px;
+		padding:4px;
+		border-radius:5px;
+	}
+	
+	#submit{ width:100px; height:29px; background-color:green; color:white; font-weight:bold; margin-top:10px; margin-left:10px; border-radius:5px;}
+	
+	#submit:hover{ background-color:purple; }
